@@ -1,0 +1,32 @@
+<!-- views/books.ejs -->
+<%- include('partials/header') %>
+
+<h2>Books List</h2>
+<a href="/books/new">Add New Book</a>
+<hr>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% books.forEach(book => { %>
+            <tr>
+                <td><%= book.title %></td>
+                <td><%= book.author %></td>
+                <td>
+                    <a href="/books/<%= book.id %>/edit">Edit</a> |
+                    <form action="/books/<%= book.id %>?_method=DELETE" method="POST" style="display:inline;">
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+
+<%- include('partials/footer') %>

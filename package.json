@@ -1,0 +1,30 @@
+{
+  "name": "forntend-267tue",
+  "version": "1.0.0",
+  "description": "Repository for forntend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Witthawat21/ForntEnd-267TUE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Witthawat21/ForntEnd-267TUE/issues"
+  },
+  "homepage": "https://github.com/Witthawat21/ForntEnd-267TUE#readme",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "http": "^0.0.1-security",
+    "method-override": "^3.0.0",
+    "sequelize": "^6.37.5",
+    "sqlite3": "^5.1.7"
+  }
+}
