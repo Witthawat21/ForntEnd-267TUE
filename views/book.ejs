@@ -1,18 +1,14 @@
-<!-- views/book.ejs -->
-<%- include('partials/header', { title: book.title }) %>
-
-<h2>Book Details</h2>
-<p><strong>Title:</strong> <%= book.title %></p>
-<p><strong>Author:</strong> <%= book.author %></p>
-
-<!-- ปุ่มสำหรับแก้ไขข้อมูลหนังสือ -->
-<a href="/books/<%= book.id %>/edit">Edit Book</a> | 
-
-<!-- ปุ่มสำหรับลบหนังสือ -->
-<form action="/books/<%= book.id %>?_method=DELETE" method="POST" style="display:inline;">
-    <button type="submit">Delete Book</button>
-</form> |
-
-<a href="/books">Back to Books List</a>
-
-<%- include('partials/footer') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+</head>
+<body>
+    <h1>Book Details</h1>
+    <p><strong>Title:</strong> <%= book.title %></p>
+    <p><strong>Author:</strong> <%= book.author %></p>
+    <a href="/">Back to Books</a>
+</body>
+</html>

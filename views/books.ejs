@@ -1,32 +1,30 @@
-<!-- views/books.ejs -->
-<%- include('partials/header') %>
-
-<h2>Books List</h2>
-<a href="/books/new">Add New Book</a>
-<hr>
-
-<table border="1">
-    <thead>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+</head>
+<body>
+    <h1>Books</h1>
+    <table border="1">
         <tr>
             <th>Title</th>
             <th>Author</th>
             <th>Actions</th>
         </tr>
-    </thead>
-    <tbody>
         <% books.forEach(book => { %>
-            <tr>
-                <td><%= book.title %></td>
-                <td><%= book.author %></td>
-                <td>
-                    <a href="/books/<%= book.id %>/edit">Edit</a> |
-                    <form action="/books/<%= book.id %>?_method=DELETE" method="POST" style="display:inline;">
-                        <button type="submit">Delete</button>
-                    </form>
-                </td>
-            </tr>
+        <tr>
+            <td><%= book.title %></td>
+            <td><%= book.author %></td>
+            <td>
+                <a href="/book/<%= book.id %>">View</a>
+                <a href="/update/<%= book.id %>">Edit</a>
+                <a href="/delete/<%= book.id %>">Delete</a>
+            </td>
+        </tr>
         <% }) %>
-    </tbody>
-</table>
-
-<%- include('partials/footer') %>
+    </table>
+    <a href="/create">Create New Book</a>
+</body>
+</html>
